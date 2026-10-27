@@ -54,6 +54,12 @@ To: {target}
 Player: {player_count} | {player}
 Dealer: {dealer_count} | {dealer}""")
 
+def soft_hard(list):
+    for n in list:
+        if n[0] == "A":
+            return True
+    return False
+
 ######################################################
 
 cont = True
@@ -128,13 +134,13 @@ while cont:
     else:
         target = "dealer"
         dealer.append(str(face_down))
-        dealer_count = card_value(card[0], dealer_count)
+        dealer_count = card_value(face_down[0], dealer_count)
         dealer.remove("face down")
         print_status(face_down, "face down card for dealer")
         time.sleep(sleep_timer)
 
         while True:
-            if (max(dealer_count + [0]) > max(player_count + [0]) or max(dealer_count + [0]) == max(player_count  + [0]) > 18 or len(dealer_count) == 0) and max(dealer_count) >= 17:
+            if max(dealer_count + [0]) > 17 or len(dealer_count) == 0 or (max(dealer_count + [0]) == 17 and soft_hard(dealer_count)):
                 break
 
             for i, n in enumerate(dealer_count):
@@ -151,12 +157,14 @@ while cont:
                 if n > 21:
                     dealer_count.pop(i)
 
-        if max(dealer_count) == max(player_count):
+        if max(dealer_count + [0]) == max(player_count + [0]):
             print("Tie")
         elif len(dealer_count) == 0:
             print("Dealer Bust")
-        elif max(dealer_count) > max(player_count):
+        elif max(dealer_count + [0]) > max(player_count + [0]):
             print("Game Over")
+        elif max(dealer_count + [0]) < max(player_count + [0]):
+            print("Victory")
 
         inp = input("Play again? ")
         if inp.lower() in "yyess":
@@ -164,4 +172,3 @@ while cont:
             deck = deck_save
         else:
             break
-
