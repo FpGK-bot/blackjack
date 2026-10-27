@@ -50,8 +50,6 @@ The project uses only Python's standard library and requires no additional packa
 
 `python blackjack.py`
 
-*Replace `blackjack.py` with the actual filename if different.*
-
 ### How to Play
 
 1. Start the game through the terminal.
