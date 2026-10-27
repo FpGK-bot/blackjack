@@ -1,5 +1,5 @@
 import random as rd
-import time
+import time 
 
 ######################################################
 
