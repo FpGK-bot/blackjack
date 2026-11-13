@@ -1,3 +1,5 @@
+⚠️⚠️ This version of the code contains is discontinued and contains major bugs. For the updated code, check [auto](https://github.com/FpGK-bot/blackjack/tree/auto)
+
 # Blackjack CLI
 
 A command-line Blackjack game developed in Python, featuring interactive gameplay against an automated dealer.
