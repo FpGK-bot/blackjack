@@ -1,4 +1,4 @@
-⚠️⚠️ This version of the code contains is discontinued and contains major bugs. For the updated code, check [auto](https://github.com/FpGK-bot/blackjack/tree/auto)
+⚠️ This version of the code contains is discontinued and contains major bugs. For the updated code, check [auto](https://github.com/FpGK-bot/blackjack/tree/Auto)
 
 # Blackjack CLI
 
